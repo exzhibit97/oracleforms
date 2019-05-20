@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dEPARTMENTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new OracleDbForms.DataSet2();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.gENDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gender = new OracleDbForms.gender();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -56,6 +59,9 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.medicinePrice = new System.Windows.Forms.TextBox();
+            this.medicineName = new System.Windows.Forms.TextBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage11 = new System.Windows.Forms.TabPage();
@@ -76,12 +82,8 @@
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.dEPARTMENTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new OracleDbForms.DataSet2();
             this.dEPARTMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gENDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gender = new OracleDbForms.gender();
             this.dOCDEPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agechartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agechart = new OracleDbForms.agechart();
@@ -103,15 +105,26 @@
             this.tEMPAGEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tEMP_AGETableAdapter = new OracleDbForms.DataSet2TableAdapters.TEMP_AGETableAdapter();
             this.tEMP_AGE1TableAdapter = new OracleDbForms.DataSet2TableAdapters.TEMP_AGE1TableAdapter();
-            this.medicineName = new System.Windows.Forms.TextBox();
-            this.medicinePrice = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dOCTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOCTORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTORFIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTORLASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTORPESELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gENDERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTORBIRTHDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEPARTMENTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTORPHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCTOREMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dEPARTMENTBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gENDERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gender)).BeginInit();
             this.tabPage8.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -124,12 +137,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tEMPAGE1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dEPARTMENTBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dEPARTMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gENDERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCDEPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agechartBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agechart)).BeginInit();
@@ -145,6 +154,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEMPAGEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCTORBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -186,11 +197,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.dateTimePicker1);
             this.tabPage3.Controls.Add(this.comboBox2);
             this.tabPage3.Controls.Add(this.comboBox1);
-            this.tabPage3.Controls.Add(this.textBox8);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Controls.Add(this.textBox6);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.textBox5);
             this.tabPage3.Controls.Add(this.textBox4);
@@ -213,30 +223,51 @@
             this.tabPage3.Text = "Doctor";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // comboBox2
             // 
-            this.textBox8.Location = new System.Drawing.Point(141, 217);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 27;
+            this.comboBox2.DataSource = this.dEPARTMENTBindingSource1;
+            this.comboBox2.DisplayMember = "DEPARTMENT_NAME";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(131, 194);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 21);
+            this.comboBox2.TabIndex = 29;
+            this.comboBox2.ValueMember = "DEPARTMENT_ID";
             // 
-            // textBox7
+            // dEPARTMENTBindingSource1
             // 
-            this.textBox7.Location = new System.Drawing.Point(141, 153);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 26;
+            this.dEPARTMENTBindingSource1.DataMember = "DEPARTMENT";
+            this.dEPARTMENTBindingSource1.DataSource = this.dataSet2;
             // 
-            // textBox6
+            // dataSet2
             // 
-            this.textBox6.Location = new System.Drawing.Point(141, 187);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 25;
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.gENDERBindingSource;
+            this.comboBox1.DisplayMember = "GENDER_NAME";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(131, 127);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.ValueMember = "GENDER_ID";
+            // 
+            // gENDERBindingSource
+            // 
+            this.gENDERBindingSource.DataMember = "GENDER";
+            this.gENDERBindingSource.DataSource = this.gender;
+            // 
+            // gender
+            // 
+            this.gender.DataSetName = "gender";
+            this.gender.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(141, 330);
+            this.button2.Location = new System.Drawing.Point(131, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 24;
@@ -246,35 +277,35 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(141, 289);
+            this.textBox5.Location = new System.Drawing.Point(131, 261);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 23;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(141, 255);
+            this.textBox4.Location = new System.Drawing.Point(131, 228);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 22;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 119);
+            this.textBox3.Location = new System.Drawing.Point(131, 94);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 21;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 85);
+            this.textBox2.Location = new System.Drawing.Point(131, 61);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 20;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 51);
+            this.textBox1.Location = new System.Drawing.Point(131, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 19;
@@ -282,7 +313,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(41, 292);
+            this.label8.Location = new System.Drawing.Point(32, 266);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 15;
@@ -291,7 +322,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 258);
+            this.label7.Location = new System.Drawing.Point(32, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 14;
@@ -300,7 +331,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 224);
+            this.label6.Location = new System.Drawing.Point(32, 200);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 13);
             this.label6.TabIndex = 13;
@@ -309,7 +340,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 190);
+            this.label5.Location = new System.Drawing.Point(32, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 12;
@@ -318,7 +349,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 156);
+            this.label4.Location = new System.Drawing.Point(32, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 11;
@@ -327,7 +358,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 122);
+            this.label3.Location = new System.Drawing.Point(32, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 10;
@@ -336,7 +367,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 88);
+            this.label2.Location = new System.Drawing.Point(32, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 9;
@@ -345,7 +376,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 54);
+            this.label1.Location = new System.Drawing.Point(32, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 8;
@@ -383,6 +414,30 @@
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Medicine";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(122, 170);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // medicinePrice
+            // 
+            this.medicinePrice.Location = new System.Drawing.Point(98, 122);
+            this.medicinePrice.Name = "medicinePrice";
+            this.medicinePrice.Size = new System.Drawing.Size(100, 20);
+            this.medicinePrice.TabIndex = 1;
+            // 
+            // medicineName
+            // 
+            this.medicineName.Location = new System.Drawing.Point(98, 75);
+            this.medicineName.Name = "medicineName";
+            this.medicineName.Size = new System.Drawing.Size(100, 20);
+            this.medicineName.TabIndex = 0;
             // 
             // tabPage9
             // 
@@ -541,19 +596,19 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.DataSource = this.tEMPAGE1BindingSource;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(76, 19);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series5";
-            series4.XValueMember = "GROUP_NAME";
-            series4.YValueMembers = "GROUP_AMOUNT";
-            this.chart1.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series5";
+            series1.XValueMember = "GROUP_NAME";
+            series1.YValueMembers = "GROUP_AMOUNT";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(626, 300);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -603,16 +658,6 @@
             this.tabPage15.Text = "tabPage15";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
-            // dEPARTMENTBindingSource1
-            // 
-            this.dEPARTMENTBindingSource1.DataMember = "DEPARTMENT";
-            this.dEPARTMENTBindingSource1.DataSource = this.dataSet2;
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dEPARTMENTBindingSource
             // 
             this.dEPARTMENTBindingSource.DataMember = "DEPARTMENT";
@@ -622,16 +667,6 @@
             // 
             this.dataSet2BindingSource.DataSource = this.dataSet2;
             this.dataSet2BindingSource.Position = 0;
-            // 
-            // gENDERBindingSource
-            // 
-            this.gENDERBindingSource.DataMember = "GENDER";
-            this.gENDERBindingSource.DataSource = this.gender;
-            // 
-            // gender
-            // 
-            this.gender.DataSetName = "gender";
-            this.gender.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dOCDEPBindingSource
             // 
@@ -746,51 +781,105 @@
             // 
             this.tEMP_AGE1TableAdapter.ClearBeforeFill = true;
             // 
-            // medicineName
+            // dateTimePicker1
             // 
-            this.medicineName.Location = new System.Drawing.Point(98, 75);
-            this.medicineName.Name = "medicineName";
-            this.medicineName.Size = new System.Drawing.Size(100, 20);
-            this.medicineName.TabIndex = 0;
+            this.dateTimePicker1.CustomFormat = "dd-MMM-yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(131, 161);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker1.TabIndex = 30;
             // 
-            // medicinePrice
+            // dataGridView3
             // 
-            this.medicinePrice.Location = new System.Drawing.Point(98, 122);
-            this.medicinePrice.Name = "medicinePrice";
-            this.medicinePrice.Size = new System.Drawing.Size(100, 20);
-            this.medicinePrice.TabIndex = 1;
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dOCTORIDDataGridViewTextBoxColumn,
+            this.dOCTORFIRSTNAMEDataGridViewTextBoxColumn,
+            this.dOCTORLASTNAMEDataGridViewTextBoxColumn,
+            this.dOCTORPESELDataGridViewTextBoxColumn,
+            this.gENDERIDDataGridViewTextBoxColumn,
+            this.dOCTORBIRTHDATEDataGridViewTextBoxColumn,
+            this.dEPARTMENTIDDataGridViewTextBoxColumn,
+            this.dOCTORPHONEDataGridViewTextBoxColumn,
+            this.dOCTOREMAILDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.dOCTORBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(272, 28);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(472, 321);
+            this.dataGridView3.TabIndex = 31;
             // 
-            // button5
+            // dOCTORBindingSource
             // 
-            this.button5.Location = new System.Drawing.Point(122, 170);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.dOCTORBindingSource.DataMember = "DOCTOR";
+            this.dOCTORBindingSource.DataSource = this.dataSet2;
             // 
-            // comboBox1
+            // dOCTORIDDataGridViewTextBoxColumn
             // 
-            this.comboBox1.DataSource = this.gENDERBindingSource;
-            this.comboBox1.DisplayMember = "GENDER_NAME";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(348, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.ValueMember = "GENDER_ID";
+            this.dOCTORIDDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_ID";
+            this.dOCTORIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.dOCTORIDDataGridViewTextBoxColumn.Name = "dOCTORIDDataGridViewTextBoxColumn";
+            this.dOCTORIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // comboBox2
+            // dOCTORFIRSTNAMEDataGridViewTextBoxColumn
             // 
-            this.comboBox2.DataSource = this.dEPARTMENTBindingSource1;
-            this.comboBox2.DisplayMember = "DEPARTMENT_NAME";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(348, 216);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 29;
-            this.comboBox2.ValueMember = "DEPARTMENT_ID";
+            this.dOCTORFIRSTNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_FIRSTNAME";
+            this.dOCTORFIRSTNAMEDataGridViewTextBoxColumn.HeaderText = "First name";
+            this.dOCTORFIRSTNAMEDataGridViewTextBoxColumn.Name = "dOCTORFIRSTNAMEDataGridViewTextBoxColumn";
+            this.dOCTORFIRSTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCTORLASTNAMEDataGridViewTextBoxColumn
+            // 
+            this.dOCTORLASTNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_LASTNAME";
+            this.dOCTORLASTNAMEDataGridViewTextBoxColumn.HeaderText = "Last name";
+            this.dOCTORLASTNAMEDataGridViewTextBoxColumn.Name = "dOCTORLASTNAMEDataGridViewTextBoxColumn";
+            this.dOCTORLASTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCTORPESELDataGridViewTextBoxColumn
+            // 
+            this.dOCTORPESELDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_PESEL";
+            this.dOCTORPESELDataGridViewTextBoxColumn.HeaderText = "PESEL";
+            this.dOCTORPESELDataGridViewTextBoxColumn.Name = "dOCTORPESELDataGridViewTextBoxColumn";
+            this.dOCTORPESELDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gENDERIDDataGridViewTextBoxColumn
+            // 
+            this.gENDERIDDataGridViewTextBoxColumn.DataPropertyName = "GENDER_ID";
+            this.gENDERIDDataGridViewTextBoxColumn.HeaderText = "GENDER";
+            this.gENDERIDDataGridViewTextBoxColumn.Name = "gENDERIDDataGridViewTextBoxColumn";
+            this.gENDERIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCTORBIRTHDATEDataGridViewTextBoxColumn
+            // 
+            this.dOCTORBIRTHDATEDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_BIRTHDATE";
+            this.dOCTORBIRTHDATEDataGridViewTextBoxColumn.HeaderText = "BIRTHDATE";
+            this.dOCTORBIRTHDATEDataGridViewTextBoxColumn.Name = "dOCTORBIRTHDATEDataGridViewTextBoxColumn";
+            this.dOCTORBIRTHDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dEPARTMENTIDDataGridViewTextBoxColumn
+            // 
+            this.dEPARTMENTIDDataGridViewTextBoxColumn.DataPropertyName = "DEPARTMENT_ID";
+            this.dEPARTMENTIDDataGridViewTextBoxColumn.HeaderText = "DEPARTMENT";
+            this.dEPARTMENTIDDataGridViewTextBoxColumn.Name = "dEPARTMENTIDDataGridViewTextBoxColumn";
+            this.dEPARTMENTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCTORPHONEDataGridViewTextBoxColumn
+            // 
+            this.dOCTORPHONEDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_PHONE";
+            this.dOCTORPHONEDataGridViewTextBoxColumn.HeaderText = "PHONE";
+            this.dOCTORPHONEDataGridViewTextBoxColumn.Name = "dOCTORPHONEDataGridViewTextBoxColumn";
+            this.dOCTORPHONEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dOCTOREMAILDataGridViewTextBoxColumn
+            // 
+            this.dOCTOREMAILDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_EMAIL";
+            this.dOCTOREMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL";
+            this.dOCTOREMAILDataGridViewTextBoxColumn.Name = "dOCTOREMAILDataGridViewTextBoxColumn";
+            this.dOCTOREMAILDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -806,6 +895,10 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dEPARTMENTBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gENDERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gender)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -819,12 +912,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tEMPAGE1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dEPARTMENTBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dEPARTMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gENDERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCDEPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agechartBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agechart)).EndInit();
@@ -840,6 +929,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEMPAGEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCTORBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -885,7 +976,6 @@
         private System.Windows.Forms.BindingSource dEPARTMENTBindingSource;
         private DataSet2TableAdapters.DEPARTMENTTableAdapter dEPARTMENTTableAdapter;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.BindingSource dEPARTMENTBindingSource1;
         private DataSet2TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button button3;
@@ -915,13 +1005,23 @@
         private DataSet2 dataSet21;
         private System.Windows.Forms.BindingSource tEMPAGE1BindingSource;
         private DataSet2TableAdapters.TEMP_AGE1TableAdapter tEMP_AGE1TableAdapter;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox medicinePrice;
         private System.Windows.Forms.TextBox medicineName;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTORIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTORFIRSTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTORLASTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTORPESELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gENDERIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTORBIRTHDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEPARTMENTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTORPHONEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOCTOREMAILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dOCTORBindingSource;
     }
 }
 

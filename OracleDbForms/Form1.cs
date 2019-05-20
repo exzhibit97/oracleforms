@@ -60,7 +60,7 @@ namespace OracleDbForms
                 MessageBox.Show(ex.Message);
             }
         }
-        private void createDoctor(string textBox1, string textBox2, string textBox3, int comboBox1, string textBox6, int comboBox2, string textBox4, string textBox5)
+        private void createDoctor(string textBox1, string textBox2, string textBox3, int comboBox1, string dateTimePicker1, int comboBox2, string textBox4, string textBox5)
         {
             try
             {
@@ -72,13 +72,15 @@ namespace OracleDbForms
                     cmd.Parameters.Add("DOCTOR_LAST_NAME", OracleDbType.Varchar2).Value = textBox2;
                     cmd.Parameters.Add("DOCTOR_PESEL", OracleDbType.Varchar2).Value = textBox3;
                     cmd.Parameters.Add("GENDER_ID", OracleDbType.Int32).Value = comboBox1;
-                    cmd.Parameters.Add("DOCTOR_BIRTHDATE", OracleDbType.Varchar2).Value = textBox6;
+                    cmd.Parameters.Add("DOCTOR_BIRTHDATE", OracleDbType.Varchar2).Value = dateTimePicker1;
                     cmd.Parameters.Add("DEPARTMENT_ID", OracleDbType.Int32).Value = comboBox2;
                     cmd.Parameters.Add("DOCTOR_PHONE", OracleDbType.Varchar2).Value = textBox4;
                     cmd.Parameters.Add("DOCTOR_EMAIL", OracleDbType.Varchar2).Value = textBox5;
 
                     connection.Open();
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Succesfully created doctor!");
+                    this.dOCTORTableAdapter.Fill(this.dataSet2.DOCTOR);
                 }
             }
             catch(Exception ex)
@@ -89,7 +91,7 @@ namespace OracleDbForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            createDoctor(textBox1.Text, textBox2.Text, textBox3.Text, Int32.Parse(comboBox1.Text), textBox6.Text, Int32.Parse(comboBox2.Text), textBox4.Text, textBox5.Text);
+            createDoctor(textBox1.Text, textBox2.Text, textBox3.Text, comboBox1.SelectedIndex+1, dateTimePicker1.Text, comboBox2.SelectedIndex+1, textBox4.Text, textBox5.Text);
         }
 
         private void Form1_Load(object sender, EventArgs e)
