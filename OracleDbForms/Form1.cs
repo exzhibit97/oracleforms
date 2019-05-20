@@ -60,28 +60,44 @@ namespace OracleDbForms
                 MessageBox.Show(ex.Message);
             }
         }
-        private void createDoctor(string first_name, string last_name, string doc_pesel, int doc_gender, DateTime doc_birth_date, int doc_dep, string doc_phone, string doc_email)
+        private void createDoctor(string textBox1, string textBox2, string textBox3, int comboBox1, string textBox6, int comboBox2, string textBox4, string textBox5)
         {
-            using (OracleConnection connection = new OracleConnection(connStr))
+            try
             {
-                OracleCommand cmd = new OracleCommand("CREATE_DOCTOR", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("DOCTOR_FIRST_NAME", OracleDbType.Varchar2).Value = textBox1;
-                cmd.Parameters.Add("DOCTOR_LAST_NAME", OracleDbType.Varchar2).Value = textBox2;
-                cmd.Parameters.Add("DOCTOR_PESEL", OracleDbType.Varchar2).Value = textBox3;
-                cmd.Parameters.Add("GENDER_ID", OracleDbType.Int32).Value = 1;
-                cmd.Parameters.Add("DOCTOR_BIRTHDATE", OracleDbType.Date).Value = textBox6;
-                cmd.Parameters.Add("DEPARTMENT_ID", OracleDbType.Int32).Value = 1;
-                cmd.Parameters.Add("DOCTOR_PHONE", OracleDbType.Varchar2).Value = textBox4;
-                cmd.Parameters.Add("DOCTOR_EMAIL", OracleDbType.Varchar2).Value = textBox5;
+                using (OracleConnection connection = new OracleConnection(connStr))
+                {
+                    OracleCommand cmd = new OracleCommand("CREATE_DOCTOR", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("DOCTOR_FIRST_NAME", OracleDbType.Varchar2).Value = textBox1;
+                    cmd.Parameters.Add("DOCTOR_LAST_NAME", OracleDbType.Varchar2).Value = textBox2;
+                    cmd.Parameters.Add("DOCTOR_PESEL", OracleDbType.Varchar2).Value = textBox3;
+                    cmd.Parameters.Add("GENDER_ID", OracleDbType.Int32).Value = comboBox1;
+                    cmd.Parameters.Add("DOCTOR_BIRTHDATE", OracleDbType.Varchar2).Value = textBox6;
+                    cmd.Parameters.Add("DEPARTMENT_ID", OracleDbType.Int32).Value = comboBox2;
+                    cmd.Parameters.Add("DOCTOR_PHONE", OracleDbType.Varchar2).Value = textBox4;
+                    cmd.Parameters.Add("DOCTOR_EMAIL", OracleDbType.Varchar2).Value = textBox5;
 
-                connection.Open();
-                cmd.ExecuteNonQuery();
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            createDoctor(textBox1.Text, textBox2.Text, textBox3.Text, Int32.Parse(comboBox1.Text), textBox6.Text, Int32.Parse(comboBox2.Text), textBox4.Text, textBox5.Text);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet21.TEMP_AGE1' table. You can move, or remove it, as needed.
+            this.tEMP_AGE1TableAdapter.Fill(this.dataSet21.TEMP_AGE1);
+            // TODO: This line of code loads data into the 'dataSet2.DOCTOR' table. You can move, or remove it, as needed.
+            this.dOCTORTableAdapter.Fill(this.dataSet2.DOCTOR);
             // TODO: This line of code loads data into the 'dataSet2.DEPARTMENT' table. You can move, or remove it, as needed.
             this.dEPARTMENTTableAdapter.Fill(this.dataSet2.DEPARTMENT);
             // TODO: This line of code loads data into the 'gender.GENDER' table. You can move, or remove it, as needed.
@@ -89,17 +105,7 @@ namespace OracleDbForms
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                createDoctor(textBox1.Text, textBox2.Text, textBox3.Text, 1, DateTime.Parse(textBox6.Text), 1, textBox4.Text, textBox5.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
         {
@@ -112,6 +118,99 @@ namespace OracleDbForms
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(connStr))
+                {
+                    DataTable dt = new DataTable();
+                    OracleCommand cmd = new OracleCommand("RESCHEDULING_EFFECT", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("patients", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    OracleDataReader reader = ((OracleRefCursor)cmd.Parameters["patients"].Value).GetDataReader();
+                    dataGridView2.Columns.Clear();
+                    dataGridView2.Rows.Clear();
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        dataGridView2.Columns.Add(reader.GetName(i), reader.GetName(i));
+                    }
+                    while (reader.Read())
+                    {
+                        string[] row = new string[reader.FieldCount];
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            row[i] = reader.GetValue(i).ToString();
+                        }
+                        dataGridView2.Rows.Add(row);
+                    }
+                    reader.Close();
+
+                    connection.Close();
+                }
+            }               
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void chart1_Load(object sender, EventArgs e)
+        {
+            OracleConnection connection = new OracleConnection(connStr);
+            OracleCommand cmd = new OracleCommand("AGE_CHART", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("AGEU18", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("AGEU25", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("AGEU40", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("AGEU60", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("AGEO60", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            createMedicine(medicineName.Text, Decimal.Parse(medicinePrice.Text)); 
+        }
+        private void createMedicine(string medicineName, decimal medicinePrice)
+        {
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(connStr))
+                {
+                    OracleCommand cmd = new OracleCommand("CREATE_MEDICINE", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("MEDICINE_NAME", OracleDbType.Varchar2, 255).Value = medicineName;
+                    cmd.Parameters.Add("MEDICINE_PRICE", OracleDbType.Decimal).Value = medicinePrice;
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
