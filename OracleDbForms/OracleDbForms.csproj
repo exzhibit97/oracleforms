@@ -48,9 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="agechart.cs">
-      <DependentUpon>agechart.xsd</DependentUpon>
-    </Compile>
     <Compile Include="agechart.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -61,18 +58,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSet2.Designer.cs">
+    <Compile Include="department.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet3.cs">
-      <DependentUpon>DataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet3.xsd</DependentUpon>
+      <DependentUpon>department.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -87,6 +76,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="visitSum.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visitSum.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="visitSummary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visitSummary.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,27 +120,16 @@
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DataSet2.xsc">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
+    <None Include="department.xsc">
+      <DependentUpon>department.xsd</DependentUpon>
     </None>
-    <None Include="DataSet2.xsd">
+    <None Include="department.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>department.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataSet2.xss">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet3.xsc">
-      <DependentUpon>DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet3.xss">
-      <DependentUpon>DataSet3.xsd</DependentUpon>
+    <None Include="department.xss">
+      <DependentUpon>department.xsd</DependentUpon>
     </None>
     <None Include="gender.xsc">
       <DependentUpon>gender.xsd</DependentUpon>
@@ -163,6 +151,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="visitSum.xsc">
+      <DependentUpon>visitSum.xsd</DependentUpon>
+    </None>
+    <None Include="visitSum.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>visitSum.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="visitSum.xss">
+      <DependentUpon>visitSum.xsd</DependentUpon>
+    </None>
+    <None Include="visitSummary.xsc">
+      <DependentUpon>visitSummary.xsd</DependentUpon>
+    </None>
+    <None Include="visitSummary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>visitSummary.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="visitSummary.xss">
+      <DependentUpon>visitSummary.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

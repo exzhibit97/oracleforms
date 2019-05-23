@@ -20,17 +20,17 @@ namespace OracleDbForms {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("department")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet1 : global::System.Data.DataSet {
+    public partial class department : global::System.Data.DataSet {
         
-        private TEMPDataTable tableTEMP;
+        private DEPARTMENTDataTable tableDEPARTMENT;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataSet1() {
+        public department() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace OracleDbForms {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected department(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace OracleDbForms {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["TEMP"] != null)) {
-                    base.Tables.Add(new TEMPDataTable(ds.Tables["TEMP"]));
+                if ((ds.Tables["DEPARTMENT"] != null)) {
+                    base.Tables.Add(new DEPARTMENTDataTable(ds.Tables["DEPARTMENT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace OracleDbForms {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TEMPDataTable TEMP {
+        public DEPARTMENTDataTable DEPARTMENT {
             get {
-                return this.tableTEMP;
+                return this.tableDEPARTMENT;
             }
         }
         
@@ -127,7 +127,7 @@ namespace OracleDbForms {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet1 cln = ((DataSet1)(base.Clone()));
+            department cln = ((department)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace OracleDbForms {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["TEMP"] != null)) {
-                    base.Tables.Add(new TEMPDataTable(ds.Tables["TEMP"]));
+                if ((ds.Tables["DEPARTMENT"] != null)) {
+                    base.Tables.Add(new DEPARTMENTDataTable(ds.Tables["DEPARTMENT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace OracleDbForms {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTEMP = ((TEMPDataTable)(base.Tables["TEMP"]));
+            this.tableDEPARTMENT = ((DEPARTMENTDataTable)(base.Tables["DEPARTMENT"]));
             if ((initTable == true)) {
-                if ((this.tableTEMP != null)) {
-                    this.tableTEMP.InitVars();
+                if ((this.tableDEPARTMENT != null)) {
+                    this.tableDEPARTMENT.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace OracleDbForms {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet1";
+            this.DataSetName = "department";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/department.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTEMP = new TEMPDataTable();
-            base.Tables.Add(this.tableTEMP);
+            this.tableDEPARTMENT = new DEPARTMENTDataTable();
+            base.Tables.Add(this.tableDEPARTMENT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeTEMP() {
+        private bool ShouldSerializeDEPARTMENT() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace OracleDbForms {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet1 ds = new DataSet1();
+            department ds = new department();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,19 +270,27 @@ namespace OracleDbForms {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void TEMPRowChangeEventHandler(object sender, TEMPRowChangeEvent e);
+        public delegate void DEPARTMENTRowChangeEventHandler(object sender, DEPARTMENTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TEMPDataTable : global::System.Data.TypedTableBase<TEMPRow> {
+        public partial class DEPARTMENTDataTable : global::System.Data.TypedTableBase<DEPARTMENTRow> {
+            
+            private global::System.Data.DataColumn columnDEPARTMENT_ID;
+            
+            private global::System.Data.DataColumn columnDEPARTMENT_NAME;
+            
+            private global::System.Data.DataColumn columnDEPARTMENT_EMAIL;
+            
+            private global::System.Data.DataColumn columnDEPARTMENT_PHONE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TEMPDataTable() {
-                this.TableName = "TEMP";
+            public DEPARTMENTDataTable() {
+                this.TableName = "DEPARTMENT";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -290,7 +298,7 @@ namespace OracleDbForms {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal TEMPDataTable(global::System.Data.DataTable table) {
+            internal DEPARTMENTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -307,9 +315,41 @@ namespace OracleDbForms {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected TEMPDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DEPARTMENTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DEPARTMENT_IDColumn {
+                get {
+                    return this.columnDEPARTMENT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DEPARTMENT_NAMEColumn {
+                get {
+                    return this.columnDEPARTMENT_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DEPARTMENT_EMAILColumn {
+                get {
+                    return this.columnDEPARTMENT_EMAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DEPARTMENT_PHONEColumn {
+                get {
+                    return this.columnDEPARTMENT_PHONE;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -323,44 +363,55 @@ namespace OracleDbForms {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TEMPRow this[int index] {
+            public DEPARTMENTRow this[int index] {
                 get {
-                    return ((TEMPRow)(this.Rows[index]));
+                    return ((DEPARTMENTRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TEMPRowChangeEventHandler TEMPRowChanging;
+            public event DEPARTMENTRowChangeEventHandler DEPARTMENTRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TEMPRowChangeEventHandler TEMPRowChanged;
+            public event DEPARTMENTRowChangeEventHandler DEPARTMENTRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TEMPRowChangeEventHandler TEMPRowDeleting;
+            public event DEPARTMENTRowChangeEventHandler DEPARTMENTRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event TEMPRowChangeEventHandler TEMPRowDeleted;
+            public event DEPARTMENTRowChangeEventHandler DEPARTMENTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddTEMPRow(TEMPRow row) {
+            public void AddDEPARTMENTRow(DEPARTMENTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TEMPRow AddTEMPRow() {
-                TEMPRow rowTEMPRow = ((TEMPRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
-                rowTEMPRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTEMPRow);
-                return rowTEMPRow;
+            public DEPARTMENTRow AddDEPARTMENTRow(decimal DEPARTMENT_ID, string DEPARTMENT_NAME, string DEPARTMENT_EMAIL, string DEPARTMENT_PHONE) {
+                DEPARTMENTRow rowDEPARTMENTRow = ((DEPARTMENTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        DEPARTMENT_ID,
+                        DEPARTMENT_NAME,
+                        DEPARTMENT_EMAIL,
+                        DEPARTMENT_PHONE};
+                rowDEPARTMENTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDEPARTMENTRow);
+                return rowDEPARTMENTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public DEPARTMENTRow FindByDEPARTMENT_ID(decimal DEPARTMENT_ID) {
+                return ((DEPARTMENTRow)(this.Rows.Find(new object[] {
+                            DEPARTMENT_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TEMPDataTable cln = ((TEMPDataTable)(base.Clone()));
+                DEPARTMENTDataTable cln = ((DEPARTMENTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -368,43 +419,62 @@ namespace OracleDbForms {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TEMPDataTable();
+                return new DEPARTMENTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnDEPARTMENT_ID = base.Columns["DEPARTMENT_ID"];
+                this.columnDEPARTMENT_NAME = base.Columns["DEPARTMENT_NAME"];
+                this.columnDEPARTMENT_EMAIL = base.Columns["DEPARTMENT_EMAIL"];
+                this.columnDEPARTMENT_PHONE = base.Columns["DEPARTMENT_PHONE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnDEPARTMENT_ID = new global::System.Data.DataColumn("DEPARTMENT_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPARTMENT_ID);
+                this.columnDEPARTMENT_NAME = new global::System.Data.DataColumn("DEPARTMENT_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPARTMENT_NAME);
+                this.columnDEPARTMENT_EMAIL = new global::System.Data.DataColumn("DEPARTMENT_EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPARTMENT_EMAIL);
+                this.columnDEPARTMENT_PHONE = new global::System.Data.DataColumn("DEPARTMENT_PHONE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDEPARTMENT_PHONE);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnDEPARTMENT_ID}, true));
+                this.columnDEPARTMENT_ID.AllowDBNull = false;
+                this.columnDEPARTMENT_ID.Unique = true;
+                this.columnDEPARTMENT_NAME.MaxLength = 255;
+                this.columnDEPARTMENT_EMAIL.MaxLength = 255;
+                this.columnDEPARTMENT_PHONE.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TEMPRow NewTEMPRow() {
-                return ((TEMPRow)(this.NewRow()));
+            public DEPARTMENTRow NewDEPARTMENTRow() {
+                return ((DEPARTMENTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TEMPRow(builder);
+                return new DEPARTMENTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TEMPRow);
+                return typeof(DEPARTMENTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TEMPRowChanged != null)) {
-                    this.TEMPRowChanged(this, new TEMPRowChangeEvent(((TEMPRow)(e.Row)), e.Action));
+                if ((this.DEPARTMENTRowChanged != null)) {
+                    this.DEPARTMENTRowChanged(this, new DEPARTMENTRowChangeEvent(((DEPARTMENTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -412,8 +482,8 @@ namespace OracleDbForms {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TEMPRowChanging != null)) {
-                    this.TEMPRowChanging(this, new TEMPRowChangeEvent(((TEMPRow)(e.Row)), e.Action));
+                if ((this.DEPARTMENTRowChanging != null)) {
+                    this.DEPARTMENTRowChanging(this, new DEPARTMENTRowChangeEvent(((DEPARTMENTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -421,8 +491,8 @@ namespace OracleDbForms {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TEMPRowDeleted != null)) {
-                    this.TEMPRowDeleted(this, new TEMPRowChangeEvent(((TEMPRow)(e.Row)), e.Action));
+                if ((this.DEPARTMENTRowDeleted != null)) {
+                    this.DEPARTMENTRowDeleted(this, new DEPARTMENTRowChangeEvent(((DEPARTMENTRow)(e.Row)), e.Action));
                 }
             }
             
@@ -430,14 +500,14 @@ namespace OracleDbForms {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TEMPRowDeleting != null)) {
-                    this.TEMPRowDeleting(this, new TEMPRowChangeEvent(((TEMPRow)(e.Row)), e.Action));
+                if ((this.DEPARTMENTRowDeleting != null)) {
+                    this.DEPARTMENTRowDeleting(this, new DEPARTMENTRowChangeEvent(((DEPARTMENTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveTEMPRow(TEMPRow row) {
+            public void RemoveDEPARTMENTRow(DEPARTMENTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -446,7 +516,7 @@ namespace OracleDbForms {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
+                department ds = new department();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -464,7 +534,7 @@ namespace OracleDbForms {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TEMPDataTable";
+                attribute2.FixedValue = "DEPARTMENTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -508,15 +578,110 @@ namespace OracleDbForms {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TEMPRow : global::System.Data.DataRow {
+        public partial class DEPARTMENTRow : global::System.Data.DataRow {
             
-            private TEMPDataTable tableTEMP;
+            private DEPARTMENTDataTable tableDEPARTMENT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal TEMPRow(global::System.Data.DataRowBuilder rb) : 
+            internal DEPARTMENTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTEMP = ((TEMPDataTable)(this.Table));
+                this.tableDEPARTMENT = ((DEPARTMENTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal DEPARTMENT_ID {
+                get {
+                    return ((decimal)(this[this.tableDEPARTMENT.DEPARTMENT_IDColumn]));
+                }
+                set {
+                    this[this.tableDEPARTMENT.DEPARTMENT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DEPARTMENT_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableDEPARTMENT.DEPARTMENT_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEPARTMENT_NAME\' in table \'DEPARTMENT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDEPARTMENT.DEPARTMENT_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DEPARTMENT_EMAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableDEPARTMENT.DEPARTMENT_EMAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEPARTMENT_EMAIL\' in table \'DEPARTMENT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDEPARTMENT.DEPARTMENT_EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DEPARTMENT_PHONE {
+                get {
+                    try {
+                        return ((string)(this[this.tableDEPARTMENT.DEPARTMENT_PHONEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DEPARTMENT_PHONE\' in table \'DEPARTMENT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDEPARTMENT.DEPARTMENT_PHONEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDEPARTMENT_NAMENull() {
+                return this.IsNull(this.tableDEPARTMENT.DEPARTMENT_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDEPARTMENT_NAMENull() {
+                this[this.tableDEPARTMENT.DEPARTMENT_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDEPARTMENT_EMAILNull() {
+                return this.IsNull(this.tableDEPARTMENT.DEPARTMENT_EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDEPARTMENT_EMAILNull() {
+                this[this.tableDEPARTMENT.DEPARTMENT_EMAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDEPARTMENT_PHONENull() {
+                return this.IsNull(this.tableDEPARTMENT.DEPARTMENT_PHONEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDEPARTMENT_PHONENull() {
+                this[this.tableDEPARTMENT.DEPARTMENT_PHONEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -524,22 +689,22 @@ namespace OracleDbForms {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class TEMPRowChangeEvent : global::System.EventArgs {
+        public class DEPARTMENTRowChangeEvent : global::System.EventArgs {
             
-            private TEMPRow eventRow;
+            private DEPARTMENTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TEMPRowChangeEvent(TEMPRow row, global::System.Data.DataRowAction action) {
+            public DEPARTMENTRowChangeEvent(DEPARTMENTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TEMPRow Row {
+            public DEPARTMENTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -555,7 +720,7 @@ namespace OracleDbForms {
         }
     }
 }
-namespace OracleDbForms.DataSet1TableAdapters {
+namespace OracleDbForms.departmentTableAdapters {
     
     
     /// <summary>
@@ -567,7 +732,7 @@ namespace OracleDbForms.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TEMPTableAdapter : global::System.ComponentModel.Component {
+    public partial class DEPARTMENTTableAdapter : global::System.ComponentModel.Component {
         
         private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
         
@@ -581,7 +746,7 @@ namespace OracleDbForms.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public TEMPTableAdapter() {
+        public DEPARTMENTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -676,6 +841,212 @@ namespace OracleDbForms.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
             this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "DEPARTMENT";
+            tableMapping.ColumnMappings.Add("DEPARTMENT_ID", "DEPARTMENT_ID");
+            tableMapping.ColumnMappings.Add("DEPARTMENT_NAME", "DEPARTMENT_NAME");
+            tableMapping.ColumnMappings.Add("DEPARTMENT_EMAIL", "DEPARTMENT_EMAIL");
+            tableMapping.ColumnMappings.Add("DEPARTMENT_PHONE", "DEPARTMENT_PHONE");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""C##PATRYK"".""DEPARTMENT"" WHERE ((""DEPARTMENT_ID"" = :Original_DEPARTMENT_ID) AND ((:IsNull_DEPARTMENT_NAME = 1 AND ""DEPARTMENT_NAME"" IS NULL) OR (""DEPARTMENT_NAME"" = :Original_DEPARTMENT_NAME)) AND ((:IsNull_DEPARTMENT_EMAIL = 1 AND ""DEPARTMENT_EMAIL"" IS NULL) OR (""DEPARTMENT_EMAIL"" = :Original_DEPARTMENT_EMAIL)) AND ((:IsNull_DEPARTMENT_PHONE = 1 AND ""DEPARTMENT_PHONE"" IS NULL) OR (""DEPARTMENT_PHONE"" = :Original_DEPARTMENT_PHONE)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DEPARTMENT_NAME";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DEPARTMENT_EMAIL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DEPARTMENT_PHONE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_PHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_PHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_PHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"C##PATRYK\".\"DEPARTMENT\" (\"DEPARTMENT_ID\", \"DEPARTMENT_NAME\", \"DEPART" +
+                "MENT_EMAIL\", \"DEPARTMENT_PHONE\") VALUES (:DEPARTMENT_ID, :DEPARTMENT_NAME, :DEPA" +
+                "RTMENT_EMAIL, :DEPARTMENT_PHONE)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_ID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_NAME";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_EMAIL";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_PHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_PHONE";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""C##PATRYK"".""DEPARTMENT"" SET ""DEPARTMENT_ID"" = :DEPARTMENT_ID, ""DEPARTMENT_NAME"" = :DEPARTMENT_NAME, ""DEPARTMENT_EMAIL"" = :DEPARTMENT_EMAIL, ""DEPARTMENT_PHONE"" = :DEPARTMENT_PHONE WHERE ((""DEPARTMENT_ID"" = :Original_DEPARTMENT_ID) AND ((:IsNull_DEPARTMENT_NAME = 1 AND ""DEPARTMENT_NAME"" IS NULL) OR (""DEPARTMENT_NAME"" = :Original_DEPARTMENT_NAME)) AND ((:IsNull_DEPARTMENT_EMAIL = 1 AND ""DEPARTMENT_EMAIL"" IS NULL) OR (""DEPARTMENT_EMAIL"" = :Original_DEPARTMENT_EMAIL)) AND ((:IsNull_DEPARTMENT_PHONE = 1 AND ""DEPARTMENT_PHONE"" IS NULL) OR (""DEPARTMENT_PHONE"" = :Original_DEPARTMENT_PHONE)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_ID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_NAME";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_EMAIL";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "DEPARTMENT_PHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_PHONE";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DEPARTMENT_NAME";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_NAME";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_NAME";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DEPARTMENT_EMAIL";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_EMAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_EMAIL";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_DEPARTMENT_PHONE";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_PHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_DEPARTMENT_PHONE";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "DEPARTMENT_PHONE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -691,8 +1062,8 @@ namespace OracleDbForms.DataSet1TableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, MONTH_NAME, VISITS_OVERALL, VISITS_SKIPPED_DUE_TO_PATIENT, VISITS_SKIP" +
-                "PED_DUE_TO_DOCTOR FROM \"C##PATRYK\".TEMP";
+            this._commandCollection[0].CommandText = "SELECT DEPARTMENT_ID, DEPARTMENT_NAME, DEPARTMENT_EMAIL, DEPARTMENT_PHONE FROM \"C" +
+                "##PATRYK\".DEPARTMENT";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -700,7 +1071,7 @@ namespace OracleDbForms.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.TEMPDataTable dataTable) {
+        public virtual int Fill(department.DEPARTMENTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -713,11 +1084,199 @@ namespace OracleDbForms.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.TEMPDataTable GetData() {
+        public virtual department.DEPARTMENTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.TEMPDataTable dataTable = new DataSet1.TEMPDataTable();
+            department.DEPARTMENTDataTable dataTable = new department.DEPARTMENTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(department.DEPARTMENTDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(department dataSet) {
+            return this.Adapter.Update(dataSet, "DEPARTMENT");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(decimal Original_DEPARTMENT_ID, string Original_DEPARTMENT_NAME, string Original_DEPARTMENT_EMAIL, string Original_DEPARTMENT_PHONE) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_DEPARTMENT_ID));
+            if ((Original_DEPARTMENT_NAME == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DEPARTMENT_NAME));
+            }
+            if ((Original_DEPARTMENT_EMAIL == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_DEPARTMENT_EMAIL));
+            }
+            if ((Original_DEPARTMENT_PHONE == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_DEPARTMENT_PHONE));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(decimal DEPARTMENT_ID, string DEPARTMENT_NAME, string DEPARTMENT_EMAIL, string DEPARTMENT_PHONE) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(DEPARTMENT_ID));
+            if ((DEPARTMENT_NAME == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DEPARTMENT_NAME));
+            }
+            if ((DEPARTMENT_EMAIL == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DEPARTMENT_EMAIL));
+            }
+            if ((DEPARTMENT_PHONE == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(DEPARTMENT_PHONE));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(decimal DEPARTMENT_ID, string DEPARTMENT_NAME, string DEPARTMENT_EMAIL, string DEPARTMENT_PHONE, decimal Original_DEPARTMENT_ID, string Original_DEPARTMENT_NAME, string Original_DEPARTMENT_EMAIL, string Original_DEPARTMENT_PHONE) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(DEPARTMENT_ID));
+            if ((DEPARTMENT_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DEPARTMENT_NAME));
+            }
+            if ((DEPARTMENT_EMAIL == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(DEPARTMENT_EMAIL));
+            }
+            if ((DEPARTMENT_PHONE == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(DEPARTMENT_PHONE));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_DEPARTMENT_ID));
+            if ((Original_DEPARTMENT_NAME == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DEPARTMENT_NAME));
+            }
+            if ((Original_DEPARTMENT_EMAIL == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_DEPARTMENT_EMAIL));
+            }
+            if ((Original_DEPARTMENT_PHONE == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_DEPARTMENT_PHONE));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string DEPARTMENT_NAME, string DEPARTMENT_EMAIL, string DEPARTMENT_PHONE, decimal Original_DEPARTMENT_ID, string Original_DEPARTMENT_NAME, string Original_DEPARTMENT_EMAIL, string Original_DEPARTMENT_PHONE) {
+            return this.Update(Original_DEPARTMENT_ID, DEPARTMENT_NAME, DEPARTMENT_EMAIL, DEPARTMENT_PHONE, Original_DEPARTMENT_ID, Original_DEPARTMENT_NAME, Original_DEPARTMENT_EMAIL, Original_DEPARTMENT_PHONE);
         }
     }
     
@@ -733,6 +1292,8 @@ namespace OracleDbForms.DataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private DEPARTMENTTableAdapter _dEPARTMENTTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -745,6 +1306,20 @@ namespace OracleDbForms.DataSet1TableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public DEPARTMENTTableAdapter DEPARTMENTTableAdapter {
+            get {
+                return this._dEPARTMENTTableAdapter;
+            }
+            set {
+                this._dEPARTMENTTableAdapter = value;
             }
         }
         
@@ -767,6 +1342,10 @@ namespace OracleDbForms.DataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._dEPARTMENTTableAdapter != null) 
+                            && (this._dEPARTMENTTableAdapter.Connection != null))) {
+                    return this._dEPARTMENTTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -780,6 +1359,9 @@ namespace OracleDbForms.DataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._dEPARTMENTTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -789,8 +1371,17 @@ namespace OracleDbForms.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(department dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._dEPARTMENTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DEPARTMENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._dEPARTMENTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -799,8 +1390,16 @@ namespace OracleDbForms.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(department dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._dEPARTMENTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DEPARTMENT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._dEPARTMENTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -809,8 +1408,16 @@ namespace OracleDbForms.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(department dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._dEPARTMENTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DEPARTMENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._dEPARTMENTTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -843,12 +1450,17 @@ namespace OracleDbForms.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DataSet1 dataSet) {
+        public virtual int UpdateAll(department dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._dEPARTMENTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._dEPARTMENTTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -882,6 +1494,15 @@ namespace OracleDbForms.DataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._dEPARTMENTTableAdapter != null)) {
+                    revertConnections.Add(this._dEPARTMENTTableAdapter, this._dEPARTMENTTableAdapter.Connection);
+                    this._dEPARTMENTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(workConnection));
+                    this._dEPARTMENTTableAdapter.Transaction = ((global::Oracle.ManagedDataAccess.Client.OracleTransaction)(workTransaction));
+                    if (this._dEPARTMENTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._dEPARTMENTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._dEPARTMENTTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -939,6 +1560,10 @@ namespace OracleDbForms.DataSet1TableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._dEPARTMENTTableAdapter != null)) {
+                    this._dEPARTMENTTableAdapter.Connection = ((global::Oracle.ManagedDataAccess.Client.OracleConnection)(revertConnections[this._dEPARTMENTTableAdapter]));
+                    this._dEPARTMENTTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

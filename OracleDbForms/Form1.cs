@@ -80,7 +80,7 @@ namespace OracleDbForms
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Succesfully created doctor!");
-                    this.dOCTORTableAdapter.Fill(this.dataSet2.DOCTOR);
+                    
                 }
             }
             catch(Exception ex)
@@ -96,24 +96,37 @@ namespace OracleDbForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet21.TEMP_AGE1' table. You can move, or remove it, as needed.
-            this.tEMP_AGE1TableAdapter.Fill(this.dataSet21.TEMP_AGE1);
-            // TODO: This line of code loads data into the 'dataSet2.DOCTOR' table. You can move, or remove it, as needed.
-            this.dOCTORTableAdapter.Fill(this.dataSet2.DOCTOR);
-            // TODO: This line of code loads data into the 'dataSet2.DEPARTMENT' table. You can move, or remove it, as needed.
-            this.dEPARTMENTTableAdapter.Fill(this.dataSet2.DEPARTMENT);
+            // TODO: This line of code loads data into the 'visitSum.TEMP' table. You can move, or remove it, as needed.
+            OracleConnection connection = new OracleConnection(connStr);
+            OracleCommand cmd = new OracleCommand("MONTHLY_VISIT_SUMMARY", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("monthly_visits", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("monthly_skipped_due_to_patient", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("monthly_skipped_due_to_doctor", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            connection.Open();
+            cmd.ExecuteNonQuery();
+            
+
+            this.tEMPTableAdapter2.Fill(this.visitSum.TEMP);
+            
+            // TODO: This line of code loads data into the 'agechart.TEMP_AGE' table. You can move, or remove it, as needed.
+            this.tEMP_AGETableAdapter.Fill(this.agechart.TEMP_AGE);
+
+            // TODO: This line of code loads data into the 'department.DEPARTMENT' table. You can move, or remove it, as needed.
+            this.dEPARTMENTTableAdapter.Fill(this.department.DEPARTMENT);
             // TODO: This line of code loads data into the 'gender.GENDER' table. You can move, or remove it, as needed.
             this.gENDERTableAdapter.Fill(this.gender.GENDER);
+            
 
         }
 
-        
+
 
         private void fillToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
-                this.dEPARTMENTTableAdapter.Fill(this.dataSet2.DEPARTMENT);
+                //this.dEPARTMENTTableAdapter.Fill(this.dataSet2.DEPARTMENT);
             }
             catch (System.Exception ex)
             {
@@ -176,17 +189,17 @@ namespace OracleDbForms
 
         private void chart1_Load(object sender, EventArgs e)
         {
-            OracleConnection connection = new OracleConnection(connStr);
-            OracleCommand cmd = new OracleCommand("AGE_CHART", connection);
-            cmd.CommandType = CommandType.StoredProcedure;
+            //OracleConnection connection = new OracleConnection(connStr);
+            //OracleCommand cmd = new OracleCommand("AGE_CHART", connection);
+            //cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("AGEU18", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("AGEU25", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("AGEU40", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("AGEU60", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("AGEO60", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-
+            //cmd.Parameters.Add("AGEU18", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            //cmd.Parameters.Add("AGEU25", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            //cmd.Parameters.Add("AGEU40", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            //cmd.Parameters.Add("AGEU60", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            //cmd.Parameters.Add("AGEO60", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
             
+
         }
 
         private void button5_Click(object sender, EventArgs e)

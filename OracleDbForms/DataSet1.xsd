@@ -2,27 +2,38 @@
 <xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.OracleDbForms.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.ManagedDataAccess.Client" />
         </Connections>
-        <Tables />
-        <Sources>
-          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="&quot;C##PATRYK&quot;.RESCHEDULING_VARRAY" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="RESCHEDULING_VARRAY" MethodsParameterType="CLR" Modifier="Public" Name="RESCHEDULING_VARRAY" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RESCHEDULING_VARRAY">
-            <SelectCommand>
-              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                <CommandText>"C##PATRYK".RESCHEDULING_VARRAY</CommandText>
-                <Parameters />
-              </DbCommand>
-            </SelectCommand>
-          </DbSource>
-        </Sources>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TEMPTableAdapter" GeneratorDataComponentClassName="TEMPTableAdapter" Name="TEMP" UserDataComponentName="TEMPTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="&quot;C##PATRYK&quot;.TEMP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, MONTH_NAME, VISITS_OVERALL, VISITS_SKIPPED_DUE_TO_PATIENT, VISITS_SKIPPED_DUE_TO_DOCTOR FROM "C##PATRYK".TEMP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TEMP" msprop:Generator_TableClassName="TEMPDataTable" msprop:Generator_TableVarName="tableTEMP" msprop:Generator_TablePropName="TEMP" msprop:Generator_RowDeletingName="TEMPRowDeleting" msprop:Generator_RowChangingName="TEMPRowChanging" msprop:Generator_RowEvHandlerName="TEMPRowChangeEventHandler" msprop:Generator_RowDeletedName="TEMPRowDeleted" msprop:Generator_UserTableName="TEMP" msprop:Generator_RowChangedName="TEMPRowChanged" msprop:Generator_RowEvArgName="TEMPRowChangeEvent" msprop:Generator_RowClassName="TEMPRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:complexType>
   </xs:element>
 </xs:schema>
